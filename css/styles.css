@@ -41,12 +41,12 @@ body {
 
 @font-face {
   font-family: 'Aurebesh';
-  src: url('../media/Fonts/Aurebesh.otf') format('truetype');
+  src: url('../Fonts/Aurebesh.otf') format('truetype');
 }
 
 @font-face {
   font-family: 'Gotham';
-  src: url('../media/Fonts/Gotham-Black.otf') format('truetype');
+  src: url('../Fonts/Gotham-Black.otf') format('truetype');
 }
 
 .tooltip-wrapper {
@@ -80,7 +80,7 @@ body {
 }
 
 .planet-name-aurabesh {
-  font-family: 'Aurabesh';
+  font-family: 'Aurebesh';
   font-weight: bold;
   font-size: medium;
   margin: 0 0 60px 0;

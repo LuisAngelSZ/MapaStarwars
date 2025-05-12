@@ -3,7 +3,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const planetInfo = document.getElementById('planet-info');  // Para cambiar info
     const planetName = document.getElementById('planet-name')  // Para cambiar el nombre
     const planetImage = document.getElementById('planet-img');  // Para cambiar el planeta
-    const bodyElement = document.getElementById('planet-body'); // Para cambiar el fondo
+    const bodyElement = document.body;
+    // Lista de clases de fondo para limpiar antes de añadir una nueva
+    const fondoClases = [
+    'alderaan-bg', 'tatooine-bg', 'yavin-iv-bg', 'hoth-bg',
+    'dagobah-bg', 'bespin-bg', 'endor-bg', 'naboo-bg',
+    'coruscant-bg', 'kamino-bg', 'default-bg'
+];
 
     if (planetId) {
         planetInfo.innerHTML = '<p>Cargando información del planeta...</p>';
@@ -28,68 +34,84 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
             console.log('Planeta recibido:', planet.name.toLowerCase());
             // Cambiar imagen del planeta y fondo según el nombre
-            switch(planet.name.toLowerCase()) {
-                case 'alderaan':
-                    planetImage.src = '../media/planetas/Alderaan.png';
-                    planetImage.alt = "Alderaan";
-                    bodyElement.className = 'planeta'; // solo mantenemos estilos generales
-                    bodyElement.style.backgroundImage = "url('../media/planetas/fondo_planetas/Aderaan_fondo.png')";
+           // Cambiar imagen del planeta y fondo según el nombre
+switch (planet.name.toLowerCase()) {
+  case 'alderaan':
+    planetImage.src = '../media/planetas/Alderaan.png';
+    planetImage.alt = "Alderaan";
+    bodyElement.classList.remove(...fondoClases);
+    bodyElement.classList.add('planeta', 'alderaan-bg');
+    break;
 
-                    break;
-                case 'tatooine':
-                    planetImage.src = '../media/planetas/tatooine.png';
-                    planetImage.alt = "Tatooine";
-                    bodyElement.className = 'planeta'; // solo mantenemos estilos generales
-                    bodyElement.style.setProperty('background-image', "url('../media/planetas/fondo_planetas/Tatooine_fondo.png')", 'important');
+  case 'tatooine':
+    planetImage.src = '../media/planetas/tatooine.png';
+    planetImage.alt = "Tatooine";
+    bodyElement.classList.remove(...fondoClases);
+    bodyElement.classList.add('planeta', 'tatooine-bg');
+    break;
 
-                    break;
-                case 'hoth':
-                    planetImage.src = '../media/planetas/hoth1.png';
-                    planetImage.alt = "Hoth";
-                    bodyElement.className = "planeta hoth-bg";
-                    break;
-                case 'dagobah':
-                    planetImage.src = '../media/planetas/dagobah.png';
-                    planetImage.alt = "Dagobah";
-                    bodyElement.className = "planeta dagobah-bg"; 
-                    break;
-                case 'bespin':
-                    planetImage.src = '../media/planetas/bespin.gif';
-                    planetImage.alt = "Bespin";
-                    bodyElement.className = "planeta bespin-bg"; 
-                    break;  
-                case 'coruscant':
-                    planetImage.src = '../media/planetas/coruscant.png';
-                    planetImage.alt = 'Coruscant';
-                    bodyElement.className = 'planeta coruscant-bg'; 
-                    break;  
-                case 'endor':
-                    planetImage.src = '../media/planetas/endor.png';
-                    planetImage.alt = 'Endor';
-                    bodyElement.className = 'planeta endor-bg'; 
-                    break;
-                 case 'kamino':
-                    planetImage.src = '../media/planetas/Kamino.webp';
-                    planetImage.alt = 'Kamino';
-                    bodyElement.className = 'planeta kamino-bg'; 
-                    break;    
-                case 'naboo':
-                    planetImage.src = '../media/planetas/Naboo.png';
-                    planetImage.alt = 'Naboo';
-                    bodyElement.className = 'planeta naboo-bg'; 
-                    break;    
-                 case 'yavin iv':
-                    planetImage.src = '../media/planetas/Yavin.png';
-                    planetImage.alt = 'yavin iv';
-                    bodyElement.className = 'yavin-iv-bg'; 
-                    break;            
-            
-                default:
-                    planetImage.src = '../media/planetas/default.png'; // Imagen por defecto si no se encuentra el planeta
-                    planetImage.alt = "Planeta Desconocido";
-                    bodyElement.className = "planeta default-bg"; // Fondo por defecto
-            }
+  case 'hoth':
+    planetImage.src = '../media/planetas/hoth1.png';
+    planetImage.alt = "Hoth";
+    bodyElement.classList.remove(...fondoClases);
+    bodyElement.classList.add('planeta', 'hoth-bg');
+    break;
 
+  case 'dagobah':
+    planetImage.src = '../media/planetas/dagobah.png';
+    planetImage.alt = "Dagobah";
+    bodyElement.classList.remove(...fondoClases);
+    bodyElement.classList.add('planeta', 'dagobah-bg');
+    break;
+
+  case 'bespin':
+    planetImage.src = '../media/planetas/bespin.gif';
+    planetImage.alt = "Bespin";
+    bodyElement.classList.remove(...fondoClases);
+    bodyElement.classList.add('planeta', 'bespin-bg');
+    break;
+
+  case 'coruscant':
+    planetImage.src = '../media/planetas/coruscant.png';
+    planetImage.alt = 'Coruscant';
+    bodyElement.classList.remove(...fondoClases);
+    bodyElement.classList.add('planeta', 'coruscant-bg');
+    break;
+
+  case 'endor':
+    planetImage.src = '../media/planetas/endor.png';
+    planetImage.alt = 'Endor';
+    bodyElement.classList.remove(...fondoClases);
+    bodyElement.classList.add('planeta', 'endor-bg');
+    break;
+
+  case 'kamino':
+    planetImage.src = '../media/planetas/Kamino.webp';
+    planetImage.alt = 'Kamino';
+    bodyElement.classList.remove(...fondoClases);
+    bodyElement.classList.add('planeta', 'kamino-bg');
+    break;
+
+  case 'naboo':
+    planetImage.src = '../media/planetas/Naboo.png';
+    planetImage.alt = 'Naboo';
+    bodyElement.classList.remove(...fondoClases);
+    bodyElement.classList.add('planeta', 'naboo-bg');
+    break;
+
+  case 'yavin iv':
+    planetImage.src = '../media/planetas/Yavin.png';
+    planetImage.alt = 'Yavin IV';
+    bodyElement.classList.remove(...fondoClases);
+    bodyElement.classList.add('planeta', 'yavin-iv-bg');
+    break;
+
+  default:
+    planetImage.src = '../media/planetas/default.png';
+    planetImage.alt = "Planeta Desconocido";
+    bodyElement.classList.remove(...fondoClases);
+    bodyElement.classList.add('planeta', 'default-bg');
+}
     })
     } else {
         planetInfo.innerHTML = '<p>No se especificó un planeta.</p>';
