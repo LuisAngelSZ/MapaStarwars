@@ -1,0 +1,33 @@
+/* Estilos generales */
+.planeta {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+/* Fondo de cada planeta */
+.alderaan-bg {
+  background-image: url('../media/planetas/fondo_planetas/Aderaan_fondo.png');
+}
+
+/* Imagen del planeta ajustada al lado izquierdo y centrada verticalmente */
+.planet-img {
+  width: 100%;           /* ocupa todo el ancho disponible de la columna */
+  max-width: 100vh;      /* opcional: límite relativo a altura de pantalla */
+  object-fit: contain;   /* mantiene proporción sin recortar */
+  padding-left: 5%;      /* opcional: margen desde el borde */
+}
+
+.linea-divisoria {
+  max-width: 60%;
+  height: auto;
+}
+
+.titulo-planeta {
+  font-size: 3rem;
+}
