@@ -7,36 +7,116 @@
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Tu CSS -->
-  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
-  <!-- CONTENEDOR DEL MAPA -->
-  <div class="container-fluid galactic-map position-relative p-0">
-    <!-- Fondo galáctico -->
-    <img src="/media/galaxia.png" alt="galaxy background" class="img-fluid w-100">
 
-    <!-- PLANETA (Alderaan) -->
-    <div class="planet-img position-absolute" style="top: 40%; left: 35%;" 
-         data-bs-toggle="tooltip" 
-         data-bs-html="true" 
-         title='<div class="text-center">ALDERAAN</div>'>
-      <img src="/media/planetas/Alderaan.png" class="planet-img" alt="Alderaan" onclick="window.location.href='/html/planet.html?id=2'">
+    <div id="parallax-container">
+        <div class="container-fluid galactic-map position-relative p-0" id="galactic-map">
+          <img src="../media/galaxia.png" alt="galaxy background" class="img-fluid w-100" id="galactic-bg">
+
+        <div class="container-fluid galactic-map position-relative p-0">
+            <!-- Imagen de fondo -->
+            <img src="../media/galaxia.png" alt="galaxy background" class="img-fluid w-100">
+
+            <!-- PLANETAS -->
+
+            <!-- TATOOINE -->
+            <div class="planet position-absolute" style="top: 72%; left: 23%;" 
+                data-bs-toggle="tooltip" data-bs-html="true" 
+                title='
+                    <div class="tooltip-wrapper">
+                        <img src="../media/etiqueta-arriba.png" class="tooltip-bg">
+
+                        <div class="tooltip-overlay text-center">
+                        <p class="planet-name">TATOOINE</p>
+                        <img src="../media/planetas/tatooine.png" class="tooltip-planet-img">
+                        </div>
+                    </div>'
+                    >
+                <img src="../media/planetas/tatooine.png" alt="Tatooine" class="planet-img" onclick="window.location.href='../html/planet/html?id=1'">
+            </div>
+
+            <!-- NABOO -->
+            <div class="planet position-absolute" style="top: 70%; left: 47%;" 
+                data-bs-toggle="tooltip" data-bs-html="true" 
+                title="<div class='text-center'>NABOO</div>"
+                onclick="redirectToPlanet(8)">
+                <img src="../media/planetas/Naboo.png" alt="Naboo" class="planet-img" onclick="window.location.href='../html/planet/html?id=8'">
+            </div>
+
+            <!-- ALDERAAN -->
+            <div class="planet position-absolute" style="top: 46%; left: 20%;" 
+                data-bs-toggle="tooltip" data-bs-html="true" 
+                title="<div class='text-center'>ALDERAAN</div>"
+                onclick="redirectToPlanet(2)">
+                <img src="../media/planetas/Alderaan.png" alt="Alderaan" class="planet-img" onclick="window.location.href='../html/planet/html?id=2'">
+            </div>
+
+            <!-- YAVIN 4 -->
+            <div class="planet position-absolute" style="top: 85%; left: 59%;" 
+                data-bs-toggle="tooltip" data-bs-html="true" 
+                title="<div class='text-center'>YAVIN IV</div>"
+                onclick="redirectToPlanet(3)">
+                <img src="../media/planetas/YavinIV_Planet_Preview.png" alt="Yavin IV" class="planet-img" onclick="window.location.href='../html/planet/html?id=3'">
+            </div>
+
+            <!-- HOTH -->
+            <div class="planet position-absolute" style="top: 67%; left: 66%;" 
+                data-bs-toggle="tooltip" data-bs-html="true" 
+                title="<div class='text-center'>HOTH</div>"
+                onclick="redirectToPlanet(4)">
+                <img src="../media/planetas/hoth1.png" alt="Hoth" class="planet-img" onclick="window.location.href='../html/planet/html?id=4'">
+            </div>
+
+            <!-- DAGOBAH -->
+            <div class="planet position-absolute" style="top: 43%; left: 60%;" 
+                data-bs-toggle="tooltip" data-bs-html="true" 
+                title="<div class='text-center'>DAGOBAH</div>"
+                onclick="redirectToPlanet(5)">
+                <img src="../media/planetas/dagobah.png" alt="Dagobah" class="planet-img" onclick="window.location.href='../html/planet/html?id=5'">
+            </div>
+
+            <!-- BESPIN -->
+            <div class="planet position-absolute" style="top: 12%; left: 52%;" 
+                data-bs-toggle="tooltip" data-bs-html="true" 
+                title="<div class='text-center'>BESPIN</div>"
+                onclick="redirectToPlanet(6)">
+                <img src="../media/planetas/bespin.gif" alt="Bespin" class="planet-img" onclick="window.location.href='../html/planet/html?id=6'">
+            </div>
+
+            <!-- ENDOR -->
+            <div class="planet position-absolute" style="top: 35%; left: 37%;" 
+                data-bs-toggle="tooltip" data-bs-html="true" 
+                title="<div class='text-center'>ENDOR</div>"
+                onclick="redirectToPlanet(7)">
+                <img src="../media/planetas/endor.png" alt="Endor" class="planet-img" onclick="window.location.href='../html/planet/html?id=7'">
+            </div>
+
+            <!-- CORUSCANT -->
+            <div class="planet position-absolute" style="top: 23%; left: 82%;" 
+                data-bs-toggle="tooltip" data-bs-html="true" 
+                title="<div class='text-center'>CORUSCANT</div>"
+                onclick="redirectToPlanet(9)">
+                <img src="../media/planetas/coruscant.png" alt="Coruscant" class="planet-img" onclick="window.location.href='../html/planet/html?id=9'">
+            </div>
+
+            <!-- KAMINO -->
+            <div class="planet position-absolute" style="top: 7%; left: 27%;" 
+                data-bs-toggle="tooltip" data-bs-html="true" 
+                title="<div class='text-center'>KAMINO</div>"
+                onclick="redirectToPlanet(10)">
+                <img src="../media/planetas/Kamino.webp" alt="Kamino" class="planet-img" onclick="window.location.href='../html/planet/html?id=10'">
+            </div>
+
+        </div>
     </div>
-  </div>
-   <!-- PLANETA (2) -->
-    <div class="planet-img position-absolute" style="top: 10%; left: 35%;" 
-         data-bs-toggle="tooltip" 
-         data-bs-html="true" 
-         title='<div class="text-center">bespin</div>'>
-      <img src="/media/planetas/bespin.gif" class="planet-img" alt="bespin" onclick="window.location.href='/html/planet.html?id=6'">
-    </div>
+</div>
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Script para tooltips -->
+  <!-- Inicializar tooltips -->
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
@@ -44,6 +124,38 @@
         return new bootstrap.Tooltip(el);
       });
     });
+
+    // Script de redirección del compañero
+    function redirectToPlanet(id) {
+      const planetPages = {
+        1: "tatooine.html",
+        2: "alderaan.html",
+        3: "yavin.html",
+        4: "hoth.html",
+        5: "dagobah.html",
+        6: "bespin.html",
+        7: "endor.html",
+        8: "naboo.html",
+        9: "coruscant.html",
+        10: "kamino.html"
+      };
+      const page = planetPages[id];
+      if (page) {
+        window.location.href = `../html/planet.html/${page}`;
+      }
+    }
   </script>
+
+<script>
+    document.addEventListener('mousemove', function(e) {
+      const map = document.getElementById('galactic-map');
+  
+      const x = (e.clientX / window.innerWidth - 0.5) * 20;  // sensibilidad horizontal
+      const y = (e.clientY / window.innerHeight - 0.5) * 20; // sensibilidad vertical
+  
+      map.style.transform = `translate(${x}px, ${y}px)`;
+    });
+  </script>
+  
 </body>
 </html>
