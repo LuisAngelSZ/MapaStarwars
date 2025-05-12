@@ -130,8 +130,8 @@ body, html {
   height: auto;
 }
 
-/* Si la pantalla es mayor de 375px: bloquear scroll */
-@media screen and (min-width: 375px) {
+/* Si la pantalla es mayor de 780px: bloquear scroll */
+@media screen and (min-width: 780px) {
   body, html {
     overflow: hidden;
     height: 100%;
