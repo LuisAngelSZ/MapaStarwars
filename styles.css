@@ -2,6 +2,56 @@ body {
   background-color: black;
 }
 
+.overlay-frame {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 99999;
+  pointer-events: none; 
+  object-position: center;
+}
+
+.title-overlay {
+  position: fixed;
+  top: 60px;  
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100000;       
+  color: #D9E7FB;
+  font-size: 80px;
+  pointer-events: none;
+  font-family: 'Gotham';   
+}
+
+.text-overlay {
+  position: fixed;
+  top: 930px;  
+  left: 12%;
+  transform: translateX(-50%);
+  z-index: 100000;       
+  color: #D9E7FB;
+  font-size: 20px;
+  font-family: 'Aurebesh'; 
+  pointer-events: none;   
+}
+
+.text-overlay2 {
+  position: fixed;
+  top: 900px;  
+  left: 87%;
+  transform: translateX(-50%);
+  z-index: 100000;       
+  color: #D9E7FB;
+  font-size: 17px;
+  font-family: 'Aurebesh'; 
+  pointer-events: none;   
+  text-align: right;
+  width: 400px;   
+  height: auto;
+}
+
 .galactic-map {
   position: relative;
   height: 100vh;
@@ -33,20 +83,19 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  width: 110vw; /* un poco más grande para permitir movimiento */
+  width: 110vw; 
   height: 110vh;
   object-fit: cover;
   z-index: -1;
 }
-
 @font-face {
   font-family: 'Aurebesh';
-  src: url('../media/fonts/Aurebesh.otf') format('truetype');
+  src: url('../Fonts/Aurebesh.otf') format('truetype');
 }
 
 @font-face {
   font-family: 'Gotham';
-  src: url('../media/fonts/Gotham-Black.otf') format('truetype');
+  src: url('../Fonts/Gotham-Black.otf') format('truetype');
 }
 
 .tooltip-wrapper {
@@ -70,20 +119,22 @@ body {
   box-sizing: border-box;
   color: #D9E7FB;
   font-size: 12px;
+  font-family: 'Aurebesh';
 }
 
 .planet-name {
   font-family: 'Gotham';
   font-weight: bold;
   font-size: medium;
-  margin: 0 0 5px 0;
+  margin-top: 7px;
 }
 
 .planet-name-aurabesh {
-  font-family: 'Aurabesh';
+  font-family: 'Aurebesh';
   font-weight: bold;
   font-size: medium;
-  margin: 0 0 60px 0;
+  margin-top: 20px;
+  margin-left: 5px;
 }
 
 .tooltip-planet-img {
