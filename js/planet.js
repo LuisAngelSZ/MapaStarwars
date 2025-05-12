@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <p><strong>Periodo orbital:</strong> ${planet.orbital_period} días</p>
             <p><strong>Agua superficial:</strong> ${planet.surface_water}%</p>
         `;
-            
+            console.log('Planeta recibido:', planet.name.toLowerCase());
             // Cambiar imagen del planeta y fondo según el nombre
             switch(planet.name.toLowerCase()) {
                 case 'alderaan':
@@ -74,10 +74,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     planetImage.alt = 'Naboo';
                     bodyElement.className = 'planeta naboo-bg'; 
                     break;    
-                 case 'yavin':
-                    planetImage.src = '../media/planetas/YavinIV_Planet_Preview.png';
-                    planetImage.alt = 'Naboo';
-                    bodyElement.className = 'planeta naboo-bg'; 
+                 case 'yavin iv':
+                    planetImage.src = '../media/planetas/Yavin.png';
+                    planetImage.alt = 'yavin iv';
+                    bodyElement.className = 'planeta yavin-iv-bg'; 
                     break;            
             
                 default:
