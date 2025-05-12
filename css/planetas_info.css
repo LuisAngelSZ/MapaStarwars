@@ -1,0 +1,90 @@
+/* Estilos generales */
+.planeta {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+.alderaan-bg {
+  background-image: url('../media/planetas/fondo_planetas/Aderaan_fondo.png');
+}
+
+.tatooine-bg {
+  background-image: url('../media/planetas/fondo_planetas/Tatooine_fondo.png');
+}
+
+.yavin-iv-bg {
+  background-image: url('../media/planetas/fondo_planetas/Yavin\ 4_fondo.png');
+}
+
+.hoth-bg {
+  background-image: url('../media/planetas/fondo_planetas/Hoth_fondo.png');
+}
+
+.dagobah-bg {
+  background-image: url('../media/planetas/fondo_planetas/Dagobah_fondo.png');
+}
+
+.bespin-bg {
+  background-image: url('../media/planetas/fondo_planetas/Bespin_fondo.png');
+}
+
+.endor-bg {
+  background-image: url('../media/planetas/fondo_planetas/Endor_fondo.png');
+}
+
+.naboo-bg {
+  background-image: url('../media/planetas/fondo_planetas/Naboo_fondo.png');
+}
+
+.coruscant-bg {
+  background-image: url('../media/planetas/fondo_planetas/Coruscant_fondo.png');
+}
+
+.kamino-bg {
+  background-image: url('../media/planetas/fondo_planetas/kamino_fondo.png');
+}
+
+
+/* Imagen del planeta ajustada al lado izquierdo y centrada verticalmente */
+.planet-img {
+  width: 70%;            /* Ajusta el tamaño al 70% del ancho disponible */
+  max-width: 100vh;      /* Opcional: límite relativo a la altura de la pantalla */
+  object-fit: contain;   /* Mantiene la proporción sin recortar */
+  padding-left: 5%;      /* Opcional: margen desde el borde */
+}
+
+
+.linea-divisoria {
+  max-width: 60%;
+  height: auto;
+}
+
+.titulo-planeta {
+  font-size: 3rem;
+}
+
+/* info api */
+#planet-info {
+  font-family: 'Roboto', sans-serif;  /* pon la fuente esta de star wars que no se entiende */
+  font-size: 1rem;                   
+  line-height: 1.5;                 
+}
+
+#planet-info h1 {
+  font-family: 'Roboto', sans-serif; 
+  font-weight: 700;                   
+  font-size: 2rem;                  
+}
+
+#planet-info p {
+  font-family: 'Roboto', sans-serif;  
+  font-weight: 400;                  
+  font-size: 1.2rem;                  
+}
+

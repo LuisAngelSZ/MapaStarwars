@@ -1,15 +1,42 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Información del Planeta</title>
-    <link rel="stylesheet" href="../css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Información del Planeta</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Tu CSS -->
+  <link rel="stylesheet" href="../../css/planetas_info.css" />
 </head>
-<body>
-    <div id="planet-info">
-        <!-- Aquí se mostrará la información del planeta -->
+
+<body class="planeta alderaan-bg">
+  <div class="container-fluid vh-100 d-flex align-items-center">
+    <div class="row w-100">
+      
+      <!-- Columna izquierda: Título, línea divisoria e info -->
+      <div class="col-md-6 d-flex flex-column justify-content-center text-white p-4">
+        <h1 id="planet-name" class="titulo-planeta text-center mb-4"></h1>
+        <img src="../../media/linea_divisoria.png" alt="Divisor" class="linea-divisoria mb-4 mx-auto" />
+        
+        <div id="planet-info">
+            <!-- Aquí se mostrará la información del planeta -->
+        </div>
+      </div>
+      <!-- Columna derecha: Imagen del planeta -->
+      <div class="col-md-6 d-flex justify-content-center align-items-center">
+        <img id="planet-img" src="../../media/planetas/Alderaan.png" alt="Alderaan" class="planet-img" />
+      </div>
+
     </div>
-    <script src="../js/planet.js"></script>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Script para cargar la info del planeta -->
+  <script src="../js/planet.js"></script> <!-- Aquí enlazas tu archivo JS -->
 </body>
 </html>
