@@ -123,3 +123,17 @@
   font-family: 'Gotham-Book';
   src: url('../Fonts/Gotham-Book.otf') format('truetype'); 
 }
+
+/* Por defecto: permitir scroll */
+body, html {
+  overflow: auto;
+  height: auto;
+}
+
+/* Si la pantalla es mayor de 375px: bloquear scroll */
+@media screen and (min-width: 375px) {
+  body, html {
+    overflow: hidden;
+    height: 100%;
+  }
+}
