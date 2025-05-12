@@ -30,33 +30,58 @@ document.addEventListener('DOMContentLoaded', () => {
             // Cambiar imagen del planeta y fondo según el nombre
             switch(planet.name.toLowerCase()) {
                 case 'alderaan':
-                    planetImage.src = '../../media/planetas/a.png';
+                    planetImage.src = '../media/planetas/Alderaan.png';
                     planetImage.alt = "Alderaan";
-                    bodyElement.className = "planeta alderaan-bg"; // Cambiar fondo
+                    bodyElement.className = "planeta alderaan-bg"; 
                     break;
                 case 'tatooine':
-                    planetImage.src = '../../media/planetas/tatooine.png';
+                    planetImage.src = '../media/planetas/tatooine.png';
                     planetImage.alt = "Tatooine";
-                    bodyElement.className = "planeta tatooine-bg"; // Cambiar fondo
+                    bodyElement.className = "planeta tatooine-bg"; 
                     break;
                 case 'hoth':
-                    planetImage.src = '../../media/planetas/hoth.png';
+                    planetImage.src = '../media/planetas/hoth1.png';
                     planetImage.alt = "Hoth";
-                    bodyElement.className = "planeta hoth-bg"; // Cambiar fondo
+                    bodyElement.className = "planeta hoth-bg";
                     break;
                 case 'dagobah':
-                    planetImage.src = '../../media/planetas/dagobah.png';
+                    planetImage.src = '../media/planetas/dagobah.png';
                     planetImage.alt = "Dagobah";
-                    bodyElement.className = "planeta dagobah-bg"; // Cambiar fondo
+                    bodyElement.className = "planeta dagobah-bg"; 
                     break;
                 case 'bespin':
                     planetImage.src = '../media/planetas/bespin.gif';
                     planetImage.alt = "Bespin";
-                    bodyElement.className = "planeta bespin-bg"; // Cambiar fondo
+                    bodyElement.className = "planeta bespin-bg"; 
+                    break;  
+                case 'coruscant':
+                    planetImage.src = '../media/planetas/coruscant.png';
+                    planetImage.alt = 'Coruscant';
+                    bodyElement.className = 'planeta coruscant-bg'; 
+                    break;  
+                case 'endor':
+                    planetImage.src = '../media/planetas/endor.png';
+                    planetImage.alt = 'Endor';
+                    bodyElement.className = 'planeta endor-bg'; 
+                    break;
+                 case 'kamino':
+                    planetImage.src = '../media/planetas/Kamino.webp';
+                    planetImage.alt = 'Kamino';
+                    bodyElement.className = 'planeta kamino-bg'; 
                     break;    
-                // Agrega más planetas si es necesario
+                case 'naboo':
+                    planetImage.src = '../media/planetas/Naboo.png';
+                    planetImage.alt = 'Naboo';
+                    bodyElement.className = 'planeta naboo-bg'; 
+                    break;    
+                 case 'yavin':
+                    planetImage.src = '../media/planetas/YavinIV_Planet_Preview.png';
+                    planetImage.alt = 'Naboo';
+                    bodyElement.className = 'planeta naboo-bg'; 
+                    break;            
+            
                 default:
-                    planetImage.src = '../../media/planetas/default.png'; // Imagen por defecto si no se encuentra el planeta
+                    planetImage.src = '../media/planetas/default.png'; // Imagen por defecto si no se encuentra el planeta
                     planetImage.alt = "Planeta Desconocido";
                     bodyElement.className = "planeta default-bg"; // Fondo por defecto
             }
