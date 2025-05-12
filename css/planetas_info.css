@@ -1,10 +1,9 @@
-/* Estilos generales */
 .planeta {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  margin: 0;
+  margin: 5%;
   padding: 0;
   font-family: Arial, sans-serif;
   color: white;
@@ -50,41 +49,76 @@
   background-image: url('../media/planetas/fondo_planetas/kamino_fondo.png');
 }
 
+.btn-volver {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+}
+
+.btn-volver img {
+  width: 40px; /* Ajusta el tamaño según lo que necesites */
+  height: auto;
+  transition: transform 0.2s ease;
+}
+
+.btn-volver img:hover {
+  transform: scale(1.5);
+}
+
+
 
 /* Imagen del planeta ajustada al lado izquierdo y centrada verticalmente */
 .planet-img {
-  width: 70%;            /* Ajusta el tamaño al 70% del ancho disponible */
-  max-width: 100vh;      /* Opcional: límite relativo a la altura de la pantalla */
-  object-fit: contain;   /* Mantiene la proporción sin recortar */
-  padding-left: 5%;      /* Opcional: margen desde el borde */
+  width: 70%;            
+  max-width: 100vh;     
+  object-fit: contain;   
+  padding-left: 5%;      
 }
 
-
 .linea-divisoria {
-  max-width: 60%;
-  height: auto;
+  display: block;        
+  max-width: 30%;        
+  height: auto;           
+  margin-left: 0;  
+  margin-right: 0;  
+  margin-bottom: 20px;   
 }
 
 .titulo-planeta {
-  font-size: 3rem;
+  font-family: 'Gotham-Book';
+  font-size: 6rem;
+  margin-bottom: 20px; 
 }
 
 /* info api */
 #planet-info {
-  font-family: 'Roboto', sans-serif;  /* pon la fuente esta de star wars que no se entiende */
-  font-size: 1rem;                   
+  text-align: left;  
+  margin-left: 20px; 
+  font-family: 'Gotham-Book';  
+  font-size: 1.2rem; 
   line-height: 1.5;                 
 }
 
 #planet-info h1 {
-  font-family: 'Roboto', sans-serif; 
-  font-weight: 700;                   
-  font-size: 2rem;                  
+  font-family: 'Aurebesh';              
+  font-size: 2rem;
 }
 
 #planet-info p {
-  font-family: 'Roboto', sans-serif;  
-  font-weight: 400;                  
-  font-size: 1.2rem;                  
+  font-family: 'Gotham-Book';                
+}
+.body{
+  margin-left: 20%;
 }
 
+/* Definir fuentes */
+@font-face {
+  font-family: 'Aurebesh';
+  src: url('../Fonts/Aurebesh.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Gotham-Book';
+  src: url('../Fonts/Gotham-Book.otf') format('truetype'); 
+}

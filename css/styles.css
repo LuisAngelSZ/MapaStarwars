@@ -41,12 +41,12 @@ body {
 
 @font-face {
   font-family: 'Aurebesh';
-  src: url('../media/fonts/Aurebesh.otf') format('truetype');
+  src: url('../media/Fonts/Aurebesh.otf') format('truetype');
 }
 
 @font-face {
   font-family: 'Gotham';
-  src: url('../media/fonts/Gotham-Black.otf') format('truetype');
+  src: url('../media/Fonts/Gotham-Black.otf') format('truetype');
 }
 
 .tooltip-wrapper {

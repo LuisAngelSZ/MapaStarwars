@@ -32,12 +32,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 case 'alderaan':
                     planetImage.src = '../media/planetas/Alderaan.png';
                     planetImage.alt = "Alderaan";
-                    bodyElement.className = "planeta alderaan-bg"; 
+                    bodyElement.className = 'planeta'; // solo mantenemos estilos generales
+                    bodyElement.style.backgroundImage = "url('../media/planetas/fondo_planetas/Aderaan_fondo.png')";
+
                     break;
                 case 'tatooine':
                     planetImage.src = '../media/planetas/tatooine.png';
                     planetImage.alt = "Tatooine";
-                    bodyElement.className = "planeta tatooine-bg"; 
+                    bodyElement.className = 'planeta'; // solo mantenemos estilos generales
+                    bodyElement.style.setProperty('background-image', "url('../media/planetas/fondo_planetas/Tatooine_fondo.png')", 'important');
+
                     break;
                 case 'hoth':
                     planetImage.src = '../media/planetas/hoth1.png';
@@ -77,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
                  case 'yavin iv':
                     planetImage.src = '../media/planetas/Yavin.png';
                     planetImage.alt = 'yavin iv';
-                    bodyElement.className = 'planeta yavin-iv-bg'; 
+                    bodyElement.className = 'yavin-iv-bg'; 
                     break;            
             
                 default:
