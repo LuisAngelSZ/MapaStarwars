@@ -11,27 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
-// Redirección personalizada por ID de planeta
-function redirectToPlanet(id) {
-  const planetPages = {
-    1: "tatooine.html",
-    2: "alderaan.html",
-    3: "yavin.html",
-    4: "hoth.html",
-    5: "dagobah.html",
-    6: "bespin.html",
-    7: "endor.html",
-    8: "naboo.html",
-    9: "coruscant.html",
-    10: "kamino.html"
-  };
-  const page = planetPages[id];
-  if (page) {
-    window.location.href = `.. /html/planet.html/${page}`;
-  }
-}
-
-// Efecto parallax en el mapa galáctico y start
+// Efecto parallax
 document.addEventListener('mousemove', function(e) {
   const bg = document.getElementById('galactic-bg');
   const x = (e.clientX / window.innerWidth - 0.5) * 20;
@@ -39,14 +19,17 @@ document.addEventListener('mousemove', function(e) {
   bg.style.transform = `translate(${x}px, ${y}px)`;
 });
 
+// Botón de inicio - fade
 document.getElementById('start-button').addEventListener('click', function() {
-document.getElementById('start-screen').style.display = 'none';
-document.getElementById('main-map').classList.remove('hidden');
-});
+  const startScreen = document.getElementById('start-screen');
+  const mainMap = document.getElementById('main-map');
 
-  // Desvanecer elementos
-document.getElementById('start-button').addEventListener('click', function() {
-document.getElementById('start-screen').classList.add('fade-out');
-document.getElementById('main-map').classList.remove('hidden');
-document.getElementById('main-map').classList.add('fade-in');
+  startScreen.classList.add('fade-out');
+
+  // Esperar a que termine el fadeOut para ocultar
+  setTimeout(() => {
+    startScreen.style.display = 'none';
+    mainMap.classList.remove('hidden');
+    mainMap.classList.add('fade-in');
+  }, 1500);
 });

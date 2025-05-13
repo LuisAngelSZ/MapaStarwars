@@ -207,11 +207,11 @@ html, body {
 }
 
 .fade-out {
-  animation: fadeOut 1.5s ease forwards;
+  animation: fadeOut 1.2s ease forwards;
 }
 
 .fade-in {
-  animation: fadeIn 1.5s ease forwards;
+  animation: fadeIn 1.2s ease forwards;
 }
 
 @keyframes fadeOut {
@@ -222,4 +222,72 @@ html, body {
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
+}
+
+/* ==========================
+   MEDIA QUERIES RESPONSIVE
+   ========================== */
+@media (max-width: 768px) {
+  .title-overlay {
+    font-size: 50px;
+  }
+
+  .text-overlay {
+    font-size: 16px;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  .text-overlay2 {
+    font-size: 14px;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 90%;
+  }
+
+  .planet-img,
+  .tooltip-planet-img {
+    width: 60px;
+  }
+
+  .planet-name,
+  .planet-name-aurabesh {
+    font-size: 12px;
+  }
+
+  #start-button {
+    font-size: 18px;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title-overlay {
+    font-size: 36px;
+  }
+
+  .text-overlay,
+  .text-overlay2 {
+    font-size: 12px;
+    width: 90%;
+  }
+
+  .planet-img,
+  .tooltip-planet-img {
+    width: 50px;
+  }
+
+  .planet-name,
+  .planet-name-aurabesh {
+    font-size: 10px;
+  }
+
+  #start-button {
+    font-size: 16px;
+    padding: 8px 16px;
+  }
 }
