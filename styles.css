@@ -1,3 +1,20 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Evita el scroll */
+  width: 100vw;
+  height: 100vh;
+}
+
+#parallax-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -1;
+}
 
 .overlay-frame {
   position: fixed;
@@ -63,6 +80,7 @@
 
 .planet-img:hover {
   transform: scale(1.5);
+  filter: brightness(1.5);
 }
 
 #galactic-map {
@@ -74,10 +92,13 @@
 
 #galactic-bg {
   position: absolute;
+  top: -5vh;
+  left: -5vw;
   width: 110vw;
   height: 110vh;
   object-fit: cover;
   transition: transform 0.1s ease;
+  pointer-events: none;
 }
 
 #start-screen {
@@ -95,6 +116,19 @@
   left: 50%;
   z-index: 2;
   background-color: none;
+}
+
+.start-button button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  box-shadow: none;
+}
+
+.start-button button:hover img {
+  transform: scale(1.1);
 }
 
 #main-map.hidden {
@@ -170,4 +204,22 @@
 
 .tooltip .tooltip-arrow {
   display: none !important;
+}
+
+.fade-out {
+  animation: fadeOut 1.5s ease forwards;
+}
+
+.fade-in {
+  animation: fadeIn 1.5s ease forwards;
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; visibility: hidden; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }

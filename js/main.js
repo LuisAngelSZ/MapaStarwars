@@ -33,13 +33,20 @@ function redirectToPlanet(id) {
 
 // Efecto parallax en el mapa galáctico y start
 document.addEventListener('mousemove', function(e) {
-    const bg = document.getElementById('galactic-bg');
-    const x = (e.clientX / window.innerWidth - 0.5) * 20;
-    const y = (e.clientY / window.innerHeight - 0.5) * 20;
-    bg.style.transform = `translate(${x}px, ${y}px)`;
-  });
+  const bg = document.getElementById('galactic-bg');
+  const x = (e.clientX / window.innerWidth - 0.5) * 20;
+  const y = (e.clientY / window.innerHeight - 0.5) * 20;
+  bg.style.transform = `translate(${x}px, ${y}px)`;
+});
 
-  document.getElementById('start-button').addEventListener('click', function() {
-    document.getElementById('start-screen').style.display = 'none';
-    document.getElementById('main-map').classList.remove('hidden');
-  });
+document.getElementById('start-button').addEventListener('click', function() {
+document.getElementById('start-screen').style.display = 'none';
+document.getElementById('main-map').classList.remove('hidden');
+});
+
+  // Desvanecer elementos
+document.getElementById('start-button').addEventListener('click', function() {
+document.getElementById('start-screen').classList.add('fade-out');
+document.getElementById('main-map').classList.remove('hidden');
+document.getElementById('main-map').classList.add('fade-in');
+});
